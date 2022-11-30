@@ -1,0 +1,76 @@
+{
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "accountProductId": {
+          "type": "integer"
+        },
+        "accountProductStatusId": {
+          "type": "integer"
+        },
+        "accountProductStatus": {
+          "type": "string"
+        },
+        "deactivationDate": {
+          "type": "string"
+        },
+        "isDelinquent": {
+          "type": "boolean"
+        },
+        "productName": {
+          "type": "string"
+        },
+        "productId": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "accountProductId",
+        "accountProductStatusId",
+        "accountProductStatus",
+        "deactivationDate",
+        "isDelinquent",
+        "productName",
+        "productId"
+      ]
+    }
+  ],
+  "additionalItems": {
+    "type": "object",
+    "properties": {
+      "accountProductId": {
+        "type": "integer"
+      },
+      "accountProductStatusId": {
+        "type": "integer"
+      },
+      "accountProductStatus": {
+        "type": "string"
+      },
+      "deactivationDate": {
+        "type": "string"
+      },
+      "isDelinquent": {
+        "type": "boolean"
+      },
+      "productName": {
+        "type": "string"
+      },
+      "productId": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "accountProductId",
+      "accountProductStatusId",
+      "accountProductStatus",
+      "deactivationDate",
+      "isDelinquent",
+      "productName",
+      "productId"
+    ]
+  }
+}
+
