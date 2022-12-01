@@ -1,6 +1,9 @@
-from utils.file_reader import read_file
+from utils.logger import logger
+
+log = logger('response_assertions')
 
 
-def test_empty_one():
-    schemaFile = read_file('product_associated_to_account.json')
-    print(schemaFile)
+def test_one():
+    log.info("Tom " + str(200))
+    log.info("Tom " + str(201))
+    log.info("Tom " + str(202))
