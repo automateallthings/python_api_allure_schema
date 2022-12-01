@@ -16,7 +16,7 @@ PASSWORD = 'Password1'
 # Create a dictionary and use it as payload. Observe how the example dealing with the object
 # decorators approach
 # axe python for accessibility testing
-# multiple assertions call a method to save results of assertion as dict or array. Log the error data
+# multiple assertions call a method to save results of assertion as dict or array. log the error data
 
 #AccountsUserID
 

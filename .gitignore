@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Lgger file
-!tests/logs/log.log
+!tests/log/log.log
