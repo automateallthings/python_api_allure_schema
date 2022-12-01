@@ -1,6 +1,6 @@
 from utils.logger import logger
 
-log = logger('response_assertions')
+log = logger('DELETE_empty_test')
 
 
 def test_one():

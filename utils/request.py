@@ -27,7 +27,6 @@ class APIRequest:
     def __get_responses(self, response):
         status_code = response.status_code
         text = response.text
-
         try:
             as_dict = response.json()
         except Exception:
