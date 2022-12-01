@@ -1,0 +1,27 @@
+2022-12-01 14:39:31,258 - INFO - schema_tests - test_get_products_for_pass_member:14 - When: Member get a list of the products associated to an account
+2022-12-01 14:39:32,167 - INFO - product_client - get_list_products_by_account_id:15 - Get list of the products associated to an account
+2022-12-01 14:39:32,168 - INFO - product_client - get_list_products_by_account_id:17 - URL: https://app-membershipapi-test.azurewebsites.net/api/accounts/4480045/products
+2022-12-01 14:39:32,527 - INFO - response_assertions - assert_status_code:14 - API call returns 200 as expected
+2022-12-01 14:39:32,527 - INFO - response_assertions - assert_status_code:15 - Response body: 
+[
+  {
+    "accountProductId": 4480187,
+    "accountProductStatusId": 1,
+    "accountProductStatus": "Active",
+    "deactivationDate": "2023-09-13T00:00:00",
+    "isDelinquent": false,
+    "productName": "Pass",
+    "productId": 295
+  },
+  {
+    "accountProductId": 4480188,
+    "accountProductStatusId": 1,
+    "accountProductStatus": "Active",
+    "deactivationDate": "2023-09-13T00:00:00",
+    "isDelinquent": false,
+    "productName": "Pass Enrollment",
+    "productId": 317
+  }
+]
+2022-12-01 14:39:32,528 - INFO - schema_tests - test_get_products_for_pass_member:16 - Then: Correct response schema is returned
+2022-12-01 14:39:32,531 - INFO - schema_assertions - schema_is_valid:14 - Schema validated successfully
