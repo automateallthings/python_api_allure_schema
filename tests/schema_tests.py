@@ -11,7 +11,8 @@ log = logger('schema_tests')
 
 
 def test_get_products_for_pass_member():
-    log.info('When: Member get a list of the products associated to an account')
+    log.info('Given: Member get a list of the products associated to an account')
     response = client.get_list_products_by_account_id(PASS_MEMBER_USER_ID, employee_token())
-    log.info('Then: Correct response schema is returned')
+    log.info('When: Correct response schema is returned')
     assert_that(schema_is_valid(response, 'product_associated_to_account')).is_equal_to(True)
+    log.info('Then: Schema passed validation')

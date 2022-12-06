@@ -1,13 +1,13 @@
-#Member data and credentials
+# Member data and credentials
 EMPLOYEE_USER = 'pva@insp.com'
 PASSWORD = 'Password1'
 
-#Env Viriables environ
+# Env Viriables environ
 # single assertions vs multiple
 # if statement and combination in the final assertion. Create and violations in JSON for each assertion.
 # check more complicate tool for errors and assertion
+
 # Work with Antonio about project structure
-# Separate repo for the membership API automation code
 # Objet enheritense for future use
 # Comprehensiveness - data generators
 # returns - returns vs yield (help to continue (not like break - return))
@@ -18,9 +18,15 @@ PASSWORD = 'Password1'
 # axe python for accessibility testing
 # multiple assertions call a method to save results of assertion as dict or array. log the error data
 
-#AccountsUserID
+# AccountsUserID
 
-#product
-PASS_MEMBER_USER_ID = '4480045'
+# product
+PASS_MEMBER_USER_ID = 4480045
 
-#relationship
+# relationship
+
+# share
+# NOTE: Accounts related to the Share should be updated manually each time. For now there is no way around.
+SHARE_RECIPIENT_ACCOUNT_ID = 4480568
+SHARE_PRODUCT_ID = 4482395
+SHARE_ACCOUNT_ID = 4480569

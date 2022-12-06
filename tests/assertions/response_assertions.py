@@ -1,14 +1,11 @@
-import json
-
+from utils.json_formater import pretty_response
 from utils.logger import logger
 
 log = logger('response_assertions')
 
 
 def assert_status_code(response, expected_status_code):
-    json_object = json.loads(response.text)
-    json_formatter = json.dumps(json_object, indent=2)
-    response_body = "Response body: \n" + json_formatter
+    response_body = "Response body: \n" + pretty_response(response)
     response_status_code = response.status_code
     if response_status_code == expected_status_code:
         log.info('API call returns ' + str(expected_status_code) + ' as expected')
