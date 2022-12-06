@@ -1,3 +1,4 @@
+import json
 from dataclasses import dataclass
 
 import requests
@@ -17,7 +18,8 @@ class APIRequest:
         return self.__get_responses(response)
 
     def post(self, url, payload, headers):
-        response = requests.post(url, data=payload, headers=headers)
+        json_pyload = json.dumps(payload)
+        response = requests.post(url, data=json_pyload, headers=headers)
         return self.__get_responses(response)
 
     def delete(self, url):

@@ -1,4 +1,5 @@
 def headers(token):
     return {
-        'Authorization': token
+        'Authorization': token,
+        'Content-Type': 'application/json'
     }
