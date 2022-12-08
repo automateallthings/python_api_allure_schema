@@ -1,3 +1,4 @@
+import pytest
 from assertpy import assert_that
 
 from accounts import SHARE_PRODUCT_ID, SHARE_ACCOUNT_ID, SHARE_RECIPIENT_ACCOUNT_ID
@@ -9,6 +10,8 @@ client = ShareClient()
 log = logger('share_tests')
 
 
+@pytest.mark.contract
+@pytest.mark.regression
 def test_post_share_product():
     log.info('Given: Member share product with other member')
     products = client.post_create_new_share(SHARE_ACCOUNT_ID, SHARE_PRODUCT_ID, SHARE_RECIPIENT_ACCOUNT_ID,

@@ -1,3 +1,4 @@
+import pytest
 from assertpy import assert_that
 
 from accounts import PASS_MEMBER_USER_ID
@@ -10,6 +11,8 @@ client = ProductClient()
 log = logger('schema_tests')
 
 
+@pytest.mark.regression
+@pytest.mark.contract
 def test_schema_get_products_for_pass_member():
     log.info('Given: Member get a list of the products associated to an account')
     response = client.get_list_products_by_account_id(PASS_MEMBER_USER_ID, employee_token())
