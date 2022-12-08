@@ -10,7 +10,7 @@ client = ProductClient()
 log = logger('schema_tests')
 
 
-def test_get_products_for_pass_member():
+def test_schema_get_products_for_pass_member():
     log.info('Given: Member get a list of the products associated to an account')
     response = client.get_list_products_by_account_id(PASS_MEMBER_USER_ID, employee_token())
     log.info('When: Correct response schema is returned')

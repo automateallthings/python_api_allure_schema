@@ -130,3 +130,4 @@ dmypy.json
 
 # Lgger file
 /tests/log/
+/tests/report_allure/

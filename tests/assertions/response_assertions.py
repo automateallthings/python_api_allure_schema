@@ -8,9 +8,9 @@ def assert_status_code(response, expected_status_code):
     response_body = "Response body: \n" + pretty_response(response)
     response_status_code = response.status_code
     if response_status_code == expected_status_code:
-        log.info('API call returns ' + str(expected_status_code) + ' as expected')
+        log.info('Status code ' + str(expected_status_code) + ' as expected')
         log.info(response_body)
     else:
-        log.error('API call returns ' + str(response_status_code) + ' is not expected')
+        log.error('Status code ' + str(response_status_code) + ' is not expected')
         log.error(response_body)
-        raise Exception(str(response_status_code) + ' is not expected')
+        raise Exception('Status code ' + str(response_status_code) + ' is not expected')
