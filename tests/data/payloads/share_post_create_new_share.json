@@ -1,0 +1,10 @@
+{
+  "ProductId": 1,
+  "RecipientAccountId": 1,
+  "StartDate": "2022-12-06T17:54:28.981Z",
+  "EndDate": "2022-12-06T17:54:28.981Z",
+  "MinCost": 1000,
+  "MaxCost": 10000,
+  "UsageQuantity": 1,
+  "PersonalMessage": "Hey! This is for you"
+}
