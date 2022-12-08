@@ -8,6 +8,7 @@ requests = "*"
 assertpy = "*"
 pytest = "*"
 jsonschema = "*"
+allure-pytest = "*"
 
 [dev-packages]
 
