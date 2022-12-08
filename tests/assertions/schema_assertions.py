@@ -1,13 +1,13 @@
 from jsonschema import Draft7Validator, SchemaError, ValidationError
 
-from utils.file_reader import read_file
+from utils.file_reader import read_schema_file
 from utils.logger import logger
 
 log = logger('schema_assertions')
 
 
 def schema_is_valid(response, schema_file_name):
-    array_schema = read_file(f'{schema_file_name}.json')
+    array_schema = read_schema_file(f'{schema_file_name}.json')
     validator = Draft7Validator(array_schema)
     try:
         validator.validate(response.as_dict)
