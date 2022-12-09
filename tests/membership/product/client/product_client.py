@@ -15,8 +15,8 @@ class ProductClient:
 
     def get_list_products_by_account_id(self, account_id, token):
         log.info('Get list of the products associated to an account')
-        BASE_URL = os.getenv('BASE_URL')
-        url = f'{BASE_URL}{GET_LIST_PRODUCT_BY_ACCOUNT_ID.replace("accountId", str(account_id))}'
+        base_url = os.getenv('BASE_URL')
+        url = f'{base_url}{GET_LIST_PRODUCT_BY_ACCOUNT_ID.replace("accountId", account_id)}'
         log.info("URL: " + url)
         response = self.request.get(url, headers(token))
         assert_status_code(response, 200)

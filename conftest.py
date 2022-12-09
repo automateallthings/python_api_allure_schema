@@ -2,6 +2,8 @@ import os
 
 import pytest
 
+from accounts import *
+
 
 def pytest_addoption(parser):
     parser.addoption('--env', action='store', default='test')
@@ -33,3 +35,9 @@ def get_url(get_env):
     elif get_env == 'qa_rs':
         _url = 'https://apis.qa.inspirato.com/membership/apex-beta'
         os.environ['BASE_URL'] = _url
+
+    if 'test' in str(get_env):
+        os.environ['PASS_MEMBER_USER_ID'] = str(TEST_PASS_MEMBER_USER_ID)
+        os.environ['SHARE_RECIPIENT_ACCOUNT_ID'] = str(TEST_SHARE_RECIPIENT_ACCOUNT_ID)
+        os.environ['SHARE_PRODUCT_ID'] = str(TEST_SHARE_PRODUCT_ID)
+        os.environ['SHARE_ACCOUNT_ID'] = str(TEST_SHARE_ACCOUNT_ID)
