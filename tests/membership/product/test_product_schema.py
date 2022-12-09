@@ -2,8 +2,8 @@ import pytest
 from assertpy import assert_that
 
 from accounts import PASS_MEMBER_USER_ID
-from clients.product_client import ProductClient
-from tests.assertions.schema_assertions import schema_is_valid
+from tests.membership.product.client.product_client import ProductClient
+from utils.assertions.schema_assertions import schema_is_valid
 from utils.authentication import employee_token
 from utils.logger import logger
 

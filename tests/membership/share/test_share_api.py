@@ -2,7 +2,7 @@ import pytest
 from assertpy import assert_that
 
 from accounts import SHARE_PRODUCT_ID, SHARE_ACCOUNT_ID, SHARE_RECIPIENT_ACCOUNT_ID
-from clients.share_client import ShareClient
+from tests.membership.share.client.share_client import ShareClient
 from utils.authentication import employee_token
 from utils.logger import logger
 
@@ -10,9 +10,18 @@ client = ShareClient()
 log = logger('share_tests')
 
 
-@pytest.mark.contract
+@pytest.fixture()
+def enroll_new_member():
+    # 1 Enroll new member. Products: select, select trip bundle, select booking
+    # 2 Retrieve member's product -
+    # 3 Search for AccountProductId of Inspirato Select Booking (ProductID = 325), return AccountProductId
+    # 4 Pass this value to test_post_share_product_validate_response_status_code()
+    pass
+
+
 @pytest.mark.regression
-def test_post_share_product():
+@pytest.mark.contract
+def test_post_share_product_validate_response_status_code(enroll_new_member):
     log.info('Given: Member share product with other member')
     products = client.post_create_new_share(SHARE_ACCOUNT_ID, SHARE_PRODUCT_ID, SHARE_RECIPIENT_ACCOUNT_ID,
                                             employee_token())

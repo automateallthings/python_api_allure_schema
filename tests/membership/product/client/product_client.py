@@ -1,5 +1,5 @@
 from config import BASE_URI, GET_LIST_PRODUCT_BY_ACCOUNT_ID
-from tests.assertions.response_assertions import assert_status_code
+from utils.assertions.response_assertions import assert_status_code
 from utils.headers import headers
 from utils.logger import logger
 from utils.request import APIRequest
