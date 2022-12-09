@@ -128,6 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Lgger file
-/tests/log/
-/tests/report_allure/
+# Logger file
+/report_allure/
