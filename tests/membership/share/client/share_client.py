@@ -16,8 +16,8 @@ class ShareClient:
 
     def post_create_new_share(self, account_id, product_id, recipient_account_id, token):
         log.info('Create a new share and returns created share id')
-        BASE_URL = os.getenv('BASE_URL')
-        url = f'{BASE_URL}{GET_POST_SHARE_BY_ACCOUNT_ID.replace("accountId", str(account_id))}'
+        base_url = os.getenv('BASE_URL')
+        url = f'{base_url}{GET_POST_SHARE_BY_ACCOUNT_ID.replace("accountId", account_id)}'
         log.info('URL: ' + url)
         payload = payload_create_new_share(product_id, recipient_account_id)
         response = self.request.post(url, payload, headers(token))
