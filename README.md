@@ -25,7 +25,7 @@ pipenv install
 python -m pytest
 
 # Run tests in parallel
-python -m pytest -n 
+python -m pytest -n auto
 
 # Run tests in selected environments: test, qa, test_rs, qa_rs
 python -m pytest --env test
