@@ -9,6 +9,7 @@ assertpy = "*"
 pytest = "*"
 jsonschema = "*"
 allure-pytest = "*"
+pytest-xdist = {extras = ["psutil"], version = "*"}
 
 [dev-packages]
 

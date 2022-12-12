@@ -11,20 +11,15 @@ def pytest_addoption(parser):
 
 @pytest.fixture
 def get_env(request):
-    _base_url = request.config.getoption('--env')
-    return _base_url
+    _env = request.config.getoption('--env')
+    os.environ['ENVIRONMENT'] = _env
+    return _env
 
 
 @pytest.fixture(autouse=True)
 def get_url(get_env):
     if get_env == 'test':
         _url = 'https://app-membershipapi-test.azurewebsites.net'
-        os.environ['BASE_URL'] = _url
-    elif get_env == 'test2':
-        _url = 'https://app-membershipapi-test2.azurewebsites.net'
-        os.environ['BASE_URL'] = _url
-    elif get_env == 'test6':
-        _url = 'https://app-membershipapi-test6.azurewebsites.net'
         os.environ['BASE_URL'] = _url
     elif get_env == 'qa':
         _url = 'https://app-membershipapi-qa.azurewebsites.net'
