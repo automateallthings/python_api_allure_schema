@@ -22,8 +22,8 @@ class APIRequest:
         response = requests.post(url, data=json_pyload, headers=headers)
         return self.__get_responses(response)
 
-    def delete(self, url):
-        response = requests.delete(url)
+    def delete(self, url, headers):
+        response = requests.delete(url, headers=headers)
         return self.__get_responses(response)
 
     def __get_responses(self, response):

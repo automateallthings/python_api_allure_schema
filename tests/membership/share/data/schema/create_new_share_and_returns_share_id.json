@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "productId": {
+      "type": "integer"
+    },
+    "accountId": {
+      "type": "integer"
+    },
+    "recipientAccountId": {
+      "type": "integer"
+    },
+    "firstName": {
+      "type": "null"
+    },
+    "lastName": {
+      "type": "null"
+    },
+    "createdDate": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "minCost": {
+      "type": "integer"
+    },
+    "maxCost": {
+      "type": "integer"
+    },
+    "usageQuantity": {
+      "type": "integer"
+    },
+    "deactivatedDate": {
+      "type": "null"
+    },
+    "redeemedDate": {
+      "type": "null"
+    },
+    "personalMessage": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "productId",
+    "accountId",
+    "recipientAccountId",
+    "firstName",
+    "lastName",
+    "createdDate",
+    "startDate",
+    "endDate",
+    "minCost",
+    "maxCost",
+    "usageQuantity",
+    "deactivatedDate",
+    "redeemedDate",
+    "personalMessage"
+  ]
+}
