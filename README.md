@@ -30,6 +30,10 @@ python -m pytest -n auto
 # Run tests in selected environments: test, qa, test_rs, qa_rs
 python -m pytest --env test
 
+# Run tests with custom marker 
+python -m pytest -v -m shares 
+python -m pytest -v -m shares --alluredir=report_allure/
+
 # Report results to report portal Allure
 python -m pytest -n auto --alluredir=report_allure/
 
