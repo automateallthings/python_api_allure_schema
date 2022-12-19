@@ -12,18 +12,25 @@ class Response:
     headers: dict
 
 
+def headers(token):
+    return {
+        'Authorization': token,
+        'Content-Type': 'application/json'
+    }
+
+
 class APIRequest:
-    def get(self, url, headers):
-        response = requests.get(url, headers=headers)
+    def get(self, url, header):
+        response = requests.get(url, headers=header)
         return self.__get_responses(response)
 
-    def post(self, url, payload, headers):
+    def post(self, url, payload, header):
         json_pyload = json.dumps(payload)
-        response = requests.post(url, data=json_pyload, headers=headers)
+        response = requests.post(url, data=json_pyload, headers=header)
         return self.__get_responses(response)
 
-    def delete(self, url, headers):
-        response = requests.delete(url, headers=headers)
+    def delete(self, url, header):
+        response = requests.delete(url, headers=header)
         return self.__get_responses(response)
 
     def __get_responses(self, response):
@@ -34,8 +41,8 @@ class APIRequest:
         except Exception:
             as_dict = {}
 
-        headers = response.headers
+        header = response.headers
 
         return Response(
-            status_code, text, as_dict, headers
+            status_code, text, as_dict, header
         )

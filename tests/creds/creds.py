@@ -10,14 +10,14 @@ class Creds:
     """Class to store all credentials needed for auth at runtime."""
 
     def __init__(self):
-        self._okta_username: str = os.getenv("OCTA_USERNAME")
-        self._okta_password: str = os.getenv("PASSWORD")
+        self._okta_username: str = os.getenv("OKTA_USERNAME")
+        self._okta_password: str = os.getenv("OKTA_PASSWORD")
         self._okta_token: str = ""
 
     @property
     def okta_token(self) -> str:
         """
-        property to get the octa token
+        property to get the okta token
         """
         if not self._okta_token:
             self._get_okta_token()
