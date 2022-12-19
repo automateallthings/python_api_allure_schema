@@ -10,6 +10,7 @@ pytest = "*"
 jsonschema = "*"
 allure-pytest = "*"
 pytest-xdist = {extras = ["psutil"], version = "*"}
+python-dotenv = "*"
 
 [dev-packages]
 

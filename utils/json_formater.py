@@ -2,7 +2,7 @@ import json
 
 
 def pretty_response(response):
-    json_object = json.loads(response.text)
+    json_object = json.loads(response)
     json_formatter = json.dumps(json_object, indent=4)
     return json_formatter
 
