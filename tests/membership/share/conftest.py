@@ -1,7 +1,7 @@
 import pytest
 
 from tests.creds.creds import Creds
-from tests.membership.share.client.share_client import ShareClient
+from tests.membership.share.client.client import ShareClient
 
 
 @pytest.fixture(scope="session")

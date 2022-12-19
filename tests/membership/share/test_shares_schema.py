@@ -12,7 +12,6 @@ log = logger('schema_tests')
 @pytest.mark.shares
 @pytest.mark.regression
 @pytest.mark.contract
-@pytest.mark.schema
 def test_schema_fetches_shares_given_and_received(share_client):
     log.info('Given: Member fetches shares given and received')
     response = share_client.get_shares(os.getenv('GET_SHARE_ACCOUNT_ID'))
@@ -24,7 +23,6 @@ def test_schema_fetches_shares_given_and_received(share_client):
 @pytest.mark.shares
 @pytest.mark.regression
 @pytest.mark.contract
-@pytest.mark.schema
 def test_schema_create_new_share(share_client):
     log.info('Given: Member create a new share')
     response = share_client.post_create_new_share(os.getenv('SHARE_ACCOUNT_ID'), os.getenv('SHARE_PRODUCT_ID_SCHEMA'),
