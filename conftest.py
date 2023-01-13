@@ -33,9 +33,11 @@ def get_url(get_env):
 
     if 'test' in str(get_env):
         os.environ['PASS_MEMBER_USER_ID'] = str(TEST_PASS_MEMBER_USER_ID)
-        os.environ['SHARE_RECIPIENT_ACCOUNT_ID'] = str(TEST_SHARE_RECIPIENT_ACCOUNT_ID)
         os.environ['SHARE_ACCOUNT_ID'] = str(TEST_SHARE_ACCOUNT_ID)
+        os.environ['SHARE_RECIPIENT_ACCOUNT_ID'] = str(TEST_SHARE_RECIPIENT_ACCOUNT_ID)
         os.environ['GET_SHARE_ACCOUNT_ID'] = str(TEST_GET_SHARE_ACCOUNT_ID)
         os.environ['SHARE_PRODUCT_ID_ADD'] = str(TEST_SHARE_PRODUCT_ID)
         os.environ['SHARE_PRODUCT_ID_DELETE'] = str(TEST_SHARE_DELETE_PRODUCT_ID)
         os.environ['SHARE_PRODUCT_ID_SCHEMA'] = str(TEST_SHARE_SCHEMA_PRODUCT_ID)
+        os.environ['REC_ACCOUNT_ID_1'] = str(TEST_RECOMMENDATIONS_ACCOUNT_ID_1)
+        os.environ['REC_ACCOUNT_USER_ID_1'] = str(TEST_RECOMMENDATIONS_ACCOUNT_USER_ID_1)

@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "account_id": {
+      "type": "integer"
+    },
+    "recommended_consolidated_asset_ids": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "account_id",
+    "recommended_consolidated_asset_ids"
+  ]
+}

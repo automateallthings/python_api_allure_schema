@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "rows_modified": {
+      "type": "integer"
+    },
+    "time_elapsed": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "rows_modified",
+    "time_elapsed"
+  ]
+}
