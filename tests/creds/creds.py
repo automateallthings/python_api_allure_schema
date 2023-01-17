@@ -17,6 +17,7 @@ class Creds:
         self._system_username: str = os.getenv("SYSTEM_USERNAME")
         self._system_password: str = os.getenv("SYSTEM_PASSWORD")
         self._system_token: str = ""
+        self._client_id: str = os.getenv("CLIENT_ID")
 
     @property
     def okta_token(self) -> str:
@@ -41,7 +42,7 @@ class Creds:
         Helper function to get okta token if it's not already set.
         """
         data = {
-            'client_id': '0oa1lqmstdfm3KHeA0h8',
+            'client_id': self._client_id,
             'grant_type': 'password',
             'scope': 'membership.write membership.read',
             'username': self._okta_username,
@@ -59,7 +60,7 @@ class Creds:
         """
         header = {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': basic_auth(self._system_username, self._system_password),
+            'Authorization': self._basic_auth(self._system_username, self._system_password),
         }
 
         data = {
@@ -72,10 +73,10 @@ class Creds:
         response_json = response.json()
         self._system_token = 'Bearer ' + response_json['access_token']
 
-
-def basic_auth(username, password):
-    base_auth = b64encode(f"{username}:{password}".encode('utf-8')).decode("ascii")
-    return f'Basic {base_auth}'
+    @staticmethod
+    def _basic_auth(username, password):
+        base_auth = b64encode(f"{username}:{password}".encode('utf-8')).decode("ascii")
+        return f'Basic {base_auth}'
 
 
 if __name__ == "__main__":

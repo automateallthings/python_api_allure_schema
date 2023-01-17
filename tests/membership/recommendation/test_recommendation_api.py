@@ -5,7 +5,7 @@ from assertpy import assert_that
 
 from utils.logger import logger
 
-log = logger('product_tests')
+log = logger('recommendation_tests')
 
 
 @pytest.mark.recommendation
