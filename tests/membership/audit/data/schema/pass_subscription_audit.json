@@ -1,0 +1,294 @@
+{
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "dryFlyAccountProductId": {
+          "type": "integer"
+        },
+        "dryFlyAccountId": {
+          "type": "integer"
+        },
+        "auditedBy": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "properties": {
+            "accountId": {
+              "type": "integer"
+            },
+            "accountProductId": {
+              "type": "integer"
+            },
+            "accountUsers": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "dryFlyAccountUserId": {
+                      "type": "integer"
+                    },
+                    "userName": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "dryFlyAccountUserId",
+                    "userName"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "accountId",
+            "accountProductId",
+            "accountUsers"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "dryFlyAccountProductId",
+        "dryFlyAccountId",
+        "auditedBy",
+        "date",
+        "type",
+        "data"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "dryFlyAccountProductId": {
+          "type": "integer"
+        },
+        "dryFlyAccountId": {
+          "type": "integer"
+        },
+        "auditedBy": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "properties": {
+            "bookingId": {
+              "type": "integer"
+            },
+            "nextBookingDate": {
+              "type": "string"
+            },
+            "departure": {
+              "type": "string"
+            },
+            "bookedOn": {
+              "type": "string"
+            },
+            "passDays": {
+              "type": "integer"
+            },
+            "cancelledDays": {
+              "type": "integer"
+            },
+            "assetOptionId": {
+              "type": "string"
+            },
+            "legacyTripId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "bookingId",
+            "nextBookingDate",
+            "departure",
+            "bookedOn",
+            "passDays",
+            "cancelledDays",
+            "assetOptionId",
+            "legacyTripId"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "dryFlyAccountProductId",
+        "dryFlyAccountId",
+        "auditedBy",
+        "date",
+        "type",
+        "data"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "dryFlyAccountProductId": {
+          "type": "integer"
+        },
+        "dryFlyAccountId": {
+          "type": "integer"
+        },
+        "auditedBy": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "properties": {
+            "accountId": {
+              "type": "integer"
+            },
+            "accountProductId": {
+              "type": "integer"
+            },
+            "bookingId": {
+              "type": "integer"
+            },
+            "passDays": {
+              "type": "integer"
+            },
+            "cancelledDays": {
+              "type": "integer"
+            },
+            "passDaysAccrued": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "accountId",
+            "accountProductId",
+            "bookingId",
+            "passDays",
+            "cancelledDays",
+            "passDaysAccrued"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "dryFlyAccountProductId",
+        "dryFlyAccountId",
+        "auditedBy",
+        "date",
+        "type",
+        "data"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "dryFlyAccountProductId": {
+          "type": "integer"
+        },
+        "dryFlyAccountId": {
+          "type": "integer"
+        },
+        "auditedBy": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "dryFlyAccountUserId": {
+                  "type": "integer"
+                },
+                "userName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "dryFlyAccountUserId",
+                "userName"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "dryFlyAccountProductId",
+        "dryFlyAccountId",
+        "auditedBy",
+        "date",
+        "type",
+        "data"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "dryFlyAccountProductId": {
+          "type": "integer"
+        },
+        "dryFlyAccountId": {
+          "type": "integer"
+        },
+        "auditedBy": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "data": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "id",
+        "dryFlyAccountProductId",
+        "dryFlyAccountId",
+        "auditedBy",
+        "date",
+        "type",
+        "data"
+      ]
+    }
+  ]
+}
