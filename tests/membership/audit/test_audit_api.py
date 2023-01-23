@@ -16,10 +16,10 @@ def test_post_share_product_validate_response_status_code(audit_client):
     response = audit_client.get_pass_subscription_audit_by_account_product_id_as_admin(
         os.getenv('AUDIT_ACCOUNT_PRODUCT_ID'))
     log.info('When: Correct filed and values is returned')
-    soft_assert(response.as_dict[0]["dryFlyAccountProductId"] == 338700)
+    soft_assert(response.as_dict[0]["dryFlyAccountProductId"] == os.getenv('AUDIT_ACCOUNT_PRODUCT_ID'))
     soft_assert(response.as_dict[0]["auditedBy"] == "pva@insp.com")
     soft_assert(response.as_dict[0]["data"]["accountId"] == 991000141)
-    soft_assert(response.as_dict[0]["data"]["accountProductId"] == 338700)
+    soft_assert(response.as_dict[0]["data"]["accountProductId"] == os.getenv('AUDIT_ACCOUNT_PRODUCT_ID'))
     soft_assert(response.as_dict[0]["data"]["accountUsers"][0]["dryFlyAccountUserId"] == 3910149)
     soft_assert(response.as_dict[0]["type"] == "Created")
     soft_assert(response.as_dict[1]["type"] == "Booking")
