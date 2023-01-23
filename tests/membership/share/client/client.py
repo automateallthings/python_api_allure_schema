@@ -1,7 +1,7 @@
 import json
 import os
 
-from config import GET_POST_SHARE_BY_ACCOUNT_ID, GET_LIST_PRODUCT_BY_ACCOUNT_ID, DELETE_SHARE_BY_ACCOUNT_ID_SHARE_ID
+from config import GET_POST_SHARE_BY_ACCOUNT_ID, DELETE_SHARE_BY_ACCOUNT_ID_SHARE_ID
 from tests.creds.creds import Creds
 from tests.membership.share.payload_builder.share_payload_builder import payload_create_new_share
 from utils.assertions.response_assertions import assert_status_code
@@ -17,7 +17,6 @@ class ShareClient:
         self.creds = creds
 
     def post_create_new_share(self, account_id, product_id, recipient_account_id):
-        log.info('POST: Create a new share')
         payload = payload_create_new_share(product_id, recipient_account_id)
         url = f'{os.getenv("BASE_URL")}{GET_POST_SHARE_BY_ACCOUNT_ID.replace("accountId", account_id)}'
         log.info('URL: ' + url)
@@ -28,7 +27,6 @@ class ShareClient:
         return response
 
     def get_shares(self, account_id):
-        log.info('GET: Fetches shares for given accountId')
         url = f'{os.getenv("BASE_URL")}{GET_POST_SHARE_BY_ACCOUNT_ID.replace("accountId", account_id)}'
         log.info('URL: ' + url)
         response = self.request.get(url, headers(self.creds.okta_token))
@@ -37,7 +35,6 @@ class ShareClient:
 
     def delete_share(self, account_id, product_id, recipient_account_id):
         self._create_share(account_id, product_id, recipient_account_id)
-        log.info('DELETE: Delete a share for a given account id and share id')
         url = f'{os.getenv("BASE_URL")}{DELETE_SHARE_BY_ACCOUNT_ID_SHARE_ID.replace("accountId", account_id).replace("shareId", os.environ.get("SHARE_ID"))}'
         log.info('URL: ' + url)
         response = self.request.delete(url, headers(self.creds.okta_token))

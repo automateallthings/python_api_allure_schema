@@ -32,6 +32,7 @@ def get_url(get_env):
         os.environ['BASE_URL'] = _url
 
     if 'test' in str(get_env):
+        os.environ['AUDIT_ACCOUNT_PRODUCT_ID'] = str(TEST_ACCOUNT_PRODUCT_ID)
         os.environ['PASS_MEMBER_USER_ID'] = str(TEST_PASS_MEMBER_USER_ID)
         os.environ['SHARE_ACCOUNT_ID'] = str(TEST_SHARE_ACCOUNT_ID)
         os.environ['SHARE_RECIPIENT_ACCOUNT_ID'] = str(TEST_SHARE_RECIPIENT_ACCOUNT_ID)
