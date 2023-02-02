@@ -1,7 +1,7 @@
 import pytest
 
 from tests.creds.creds import Creds
-from tests.membership.recommendation.client.client import RecommendationClient
+from tests.domain.recommendation.client.client import RecommendationClient
 
 
 @pytest.fixture(scope="session")

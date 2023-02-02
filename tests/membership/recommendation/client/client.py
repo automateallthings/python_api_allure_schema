@@ -2,7 +2,7 @@ import os
 
 from config import GET_RECOMMENDATIONS_BY_ACCOUNT_ID, PUT_RECOMMENDATIONS_BY_ACCOUNT_ID
 from tests.creds.creds import Creds
-from tests.membership.recommendation.payload_builder.recommendation_payload_builder import \
+from tests.domain.recommendation.payload_builder.recommendation_payload_builder import \
     payload_add_recommendation_to_account
 from utils.assertions.response_assertions import assert_status_code
 from utils.logger import logger

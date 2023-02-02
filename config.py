@@ -12,20 +12,20 @@ GET_PASS_SUBSCRIPTION_BY_ACCOUNT_PRODUCT_ID = '/api/Audit/subscriptions/accountP
 POST_PASS_SUBSCRIPTION = '/api/DataImport/pass-subscriptions'
 POST_DATA_BOOKING = '/api/DataImport/pass-subscriptions'
 
-# Membership
-GET_PASS_AVAILABILITIES_BY_ACCOUNT_ID = '/api/Membership/accountId/subscriptions/pass-availabilities'
-GET_POST_SUBSCRIPTIONS_BY_ACCOUNT_ID = '/api/Membership/accountId/subscriptions'  # Querying by bookingID "?bookingId=bookingId" for get
-PUT_ADD_PASS_BOOKING_BY_ACCOUNT_ID_ACCOUNT_PRODUCT = '/api/Membership/accountId/subscriptions/accountProductId/booking'
-DELETE_BOOKING_BY_ACCOUNT_ID_ACCOUNT_PRODUCT_BOOKING_ID = '/api/Membership/accountId/subscriptions/accountProductId/booking/bookingId'
-PUT_UPDATE_ACCOUNT_USERS_BY_ACCOUNT_ID = '/api/Membership/accountId/subscriptions/account-users'
-DELETE_PASS_SUBSCRIPTION_BY_ACCOUNT_ID_ACCOUNT_PRODUCT_ID = '/api/Membership/accountId/subscriptions/accountProductId'
+# domain
+GET_PASS_AVAILABILITIES_BY_ACCOUNT_ID = '/api/domain/accountId/subscriptions/pass-availabilities'
+GET_POST_SUBSCRIPTIONS_BY_ACCOUNT_ID = '/api/domain/accountId/subscriptions'  # Querying by bookingID "?bookingId=bookingId" for get
+PUT_ADD_PASS_BOOKING_BY_ACCOUNT_ID_ACCOUNT_PRODUCT = '/api/domain/accountId/subscriptions/accountProductId/booking'
+DELETE_BOOKING_BY_ACCOUNT_ID_ACCOUNT_PRODUCT_BOOKING_ID = '/api/domain/accountId/subscriptions/accountProductId/booking/bookingId'
+PUT_UPDATE_ACCOUNT_USERS_BY_ACCOUNT_ID = '/api/domain/accountId/subscriptions/account-users'
+DELETE_PASS_SUBSCRIPTION_BY_ACCOUNT_ID_ACCOUNT_PRODUCT_ID = '/api/domain/accountId/subscriptions/accountProductId'
 
 # Product
 GET_LIST_PRODUCT_BY_ACCOUNT_ID = '/api/accounts/accountId/products'
 
 # Recommendation
-GET_RECOMMENDATIONS_BY_ACCOUNT_ID = '/api/Membership/accountId/recommendations'
-PUT_RECOMMENDATIONS_BY_ACCOUNT_ID = '/api/Membership/recommendations'
+GET_RECOMMENDATIONS_BY_ACCOUNT_ID = '/api/domain/accountId/recommendations'
+PUT_RECOMMENDATIONS_BY_ACCOUNT_ID = '/api/domain/recommendations'
 
 # Relationship
 GET_POST_RELATIONSHIP_BY_ACCOUNT_ID = '/api/accounts/accountId/relationships'

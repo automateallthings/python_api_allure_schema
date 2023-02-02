@@ -44,7 +44,7 @@ class Creds:
         data = {
             'client_id': self._client_id,
             'grant_type': 'password',
-            'scope': 'membership.write membership.read',
+            'scope': 'domain.write domain.read',
             'username': self._okta_username,
             'password': self._okta_password
         }
@@ -65,7 +65,7 @@ class Creds:
 
         data = {
             'grant_type': 'client_credentials',
-            'scope': 'membership.write',
+            'scope': 'domain.write',
         }
         response = requests.post(AUTH_URL, headers=header, data=data)
         assert_that(response.status_code, description='System token not created. Authentication failed') \

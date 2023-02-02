@@ -1,7 +1,7 @@
 import pytest
 
 from tests.creds.creds import Creds
-from tests.membership.audit.client.client import AuditClient
+from tests.domain.audit.client.client import AuditClient
 
 
 @pytest.fixture(scope="session")

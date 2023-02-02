@@ -2,9 +2,9 @@ import json
 import os
 
 SCHEMA_BASE_PATH = os.path.realpath(
-    os.path.join(os.path.dirname(__file__), '..', 'tests', 'membership', 'package', 'data', 'schema'))
+    os.path.join(os.path.dirname(__file__), '..', 'tests', 'domain', 'package', 'data', 'schema'))
 PAYLOAD_BASE_PATH = os.path.realpath(
-    os.path.join(os.path.dirname(__file__), '..', 'tests', 'membership', 'package', 'data', 'payload'))
+    os.path.join(os.path.dirname(__file__), '..', 'tests', 'domain', 'package', 'data', 'payload'))
 
 
 def read_schema_file(file_name, package_name):

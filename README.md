@@ -1,4 +1,4 @@
-# API test automation framework with Python for Membership Api
+# API test automation framework with Python for domain Api
 
 ## Setup
 
@@ -10,7 +10,7 @@ pipenv install
 ```
 
 ## Application under test
-Swagger: https://app-membershipapi-test.azurewebsites.net/swagger/index.html
+Swagger: https://app-domainapi-test.azurewebsites.net/swagger/index.html
 
 ## How to run
 

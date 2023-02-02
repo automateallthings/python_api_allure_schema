@@ -3,7 +3,7 @@ import os
 
 from config import GET_POST_SHARE_BY_ACCOUNT_ID, DELETE_SHARE_BY_ACCOUNT_ID_SHARE_ID
 from tests.creds.creds import Creds
-from tests.membership.share.payload_builder.share_payload_builder import payload_create_new_share
+from tests.domain.share.payload_builder.share_payload_builder import payload_create_new_share
 from utils.assertions.response_assertions import assert_status_code
 from utils.logger import logger
 from utils.request import APIRequest, headers
