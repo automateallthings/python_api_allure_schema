@@ -4,7 +4,7 @@ from base64 import b64encode
 import requests
 from assertpy import assert_that
 
-AUTH_URL = 'https://test-signin.inspirato.com/oauth2/default/v1/token'
+AUTH_URL = 'https://test-signin.appName.com/oauth2/default/v1/token'
 
 
 class Creds:

@@ -25,10 +25,10 @@ def get_url(get_env):
         _url = 'https://app-domainapi-qa.azurewebsites.net'
         os.environ['BASE_URL'] = _url
     elif get_env == 'test_rs':
-        _url = 'https://apis.test.inspirato.com/domain/apex-beta'
+        _url = 'https://apis.test.appName.com/domain/apex-beta'
         os.environ['BASE_URL'] = _url
     elif get_env == 'qa_rs':
-        _url = 'https://apis.qa.inspirato.com/domain/apex-beta'
+        _url = 'https://apis.qa.appName.com/domain/apex-beta'
         os.environ['BASE_URL'] = _url
 
     if 'test' in str(get_env):
